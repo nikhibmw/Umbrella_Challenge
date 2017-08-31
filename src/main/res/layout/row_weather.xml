@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <com.foo.umbrella.customviews.WeatherItem
+        android:id="@+id/item1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_weight="1"></com.foo.umbrella.customviews.WeatherItem>
+
+    <com.foo.umbrella.customviews.WeatherItem
+        android:id="@+id/item2"
+        android:visibility="invisible"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"></com.foo.umbrella.customviews.WeatherItem>
+
+    <com.foo.umbrella.customviews.WeatherItem
+        android:id="@+id/item3"
+        android:visibility="invisible"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"></com.foo.umbrella.customviews.WeatherItem>
+
+    <com.foo.umbrella.customviews.WeatherItem
+        android:visibility="invisible"
+        android:id="@+id/item4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"></com.foo.umbrella.customviews.WeatherItem>
+</LinearLayout>

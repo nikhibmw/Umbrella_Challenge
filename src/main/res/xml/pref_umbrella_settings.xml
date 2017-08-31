@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference
+        android:capitalize="words"
+        android:defaultValue="@string/pref_default_zip_value"
+        android:inputType="textCapWords"
+        android:key="@string/pref_header_zip"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/pref_header_zip" />
+    <ListPreference
+        android:defaultValue="@string/pref_default_unit_value"
+        android:entries="@array/pref_unit_values"
+        android:entryValues="@array/pref_unit_values"
+        android:key="@string/pref_header_Units"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:title="@string/pref_header_Units" />
+</PreferenceScreen>

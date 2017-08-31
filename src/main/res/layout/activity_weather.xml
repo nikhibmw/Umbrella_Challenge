@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data></data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/weather_cool"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"></android.support.v7.widget.Toolbar>
+
+        <RelativeLayout
+            android:id="@+id/rl_weather_header"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@+id/toolbar"
+            android:background="@color/weather_cool"
+            android:elevation="5dp">
+
+            <TextView
+                android:id="@+id/txtview_temperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="11"
+                android:textColor="@color/white"
+                android:textSize="54sp" />
+
+            <TextView
+                android:id="@+id/txtview_weather_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtview_temperature"
+                android:layout_centerHorizontal="true"
+                android:text="Clear"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rl_weather_header"
+
+            android:background="@color/content_bg">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/card_view_todays_weather"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:minHeight="200dp"
+                    card_view:cardCornerRadius="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="4dp"
+                            android:text="@string/today"
+                            android:textSize="20sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginBottom="4dp"
+                            android:background="@color/forecast_card_divider"></View>
+
+                        <com.foo.umbrella.customviews.FlowLayout
+                            android:id="@+id/ll_todays_weather"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"></com.foo.umbrella.customviews.FlowLayout>
+
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/card_view_tomorrow_weather"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:minHeight="200dp"
+                    card_view:cardCornerRadius="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="4dp"
+                            android:text="@string/tomorrow"
+                            android:textSize="20sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginBottom="4dp"
+                            android:background="@color/forecast_card_divider"></View>
+
+                        <com.foo.umbrella.customviews.FlowLayout
+                            android:id="@+id/ll_tomorrow_weather"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"></com.foo.umbrella.customviews.FlowLayout>
+
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</layout>
